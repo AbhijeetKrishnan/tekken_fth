@@ -3,22 +3,7 @@
   <Forms>
     <FAST_T_HUNT Class="TCEForm" Encoding="Ascii85">ZH{:Hf-n=COA8c5f5C})#nBZA1QP-#*HsqVC/LUW*DSm6$Ilc2iGy#udH3X:xdZ@(yBkbw$7TGcyJkdU5[@Y$$bNbes6=ul:GRQ1CqRVNNQ25TPeg]+gl$?joK?.Cwy=]Qt.7WBL.f.}%{T}*!!Q62tL{F$u/it:/vV;=Mj2}(6]?UGQI54nm{N@J4VZO]*=J8hZm9Qua6Rh5=Z+zTM!6T5/i]5nHI2_y$di.q)A@s</FAST_T_HUNT>
   </Forms>
-  <CheatEntries>
-    <CheatEntry>
-      <ID>2</ID>
-      <Description>"HP_ADDR_0"</Description>
-      <LastState Value="0" RealAddress="14341BE32"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>14341BE32</Address>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>3</ID>
-      <Description>"HP_ADDR_1"</Description>
-      <LastState Value="0" RealAddress="14342A996"/>
-      <VariableType>4 Bytes</VariableType>
-      <Address>14342A996</Address>
-    </CheatEntry>
-  </CheatEntries>
+  <CheatEntries/>
   <UserdefinedSymbols/>
   <LuaScript>getAutoAttachList().add("TekkenGame-Win64-Shipping.exe")
 
