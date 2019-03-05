@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheatTable CheatEngineTableVersion="27">
   <Forms>
-    <FAST_T_HUNT Class="TCEForm" Encoding="Ascii85">ZH{:Hf-n=COA8c5f5C})#nBZA1QP-#*HsqVC/LUW*DSm6$Ilc2iGy#udH3X:xdZ@(yBkbw$7TGcyJkdU5[@Y$$bNbes6=ul:GRQ1CqRVNNQ25TPeg]+gl$?joK?.Cwy=]Qt.7WBL.f.}%{T}*!!Q62tL{F$u/it:/vV;=Mj2}(6]?UGQI54nm{N@J4VZO]*=J8hZm9Qua6Rh5=Z+zTM!6T5/i]5nHI2_y$di.q)A@s</FAST_T_HUNT>
+    <FAST_T_HUNT Class="TCEForm" Encoding="Ascii85">jgqmB)=Af0H,Jsq+s%l@=MkFhpiP64oUKF)Np$upWwegx=3L_ZYj.fu6$Nj;3-C/504+(QY#b+Xh:R%+(.0*W-!l(.LeVC8WkoYT.G%ScNf[.--TYw^b)ip^Ox)Sl15Gn!njJIZmH7=bY-yr0@QGZVxkx{P[MAz#AJgzC6[js+*u=TS;R5nf$MTMnf}VGuRElzT].@n46%=4dQrvTWf!xe@!9^m47$9rSbZ=)quD[a0mwr:tVa5+(77;_GiLh+]CdGjqCF/!,)@?HwJCC0OeeSe?4BX]Tddc$/UG24kfAZ^z#OqTw1ED7j;uwSLhP=O;$VG9b@xGGIVLAxe8nYxZ6n6W3-C(Gom*)3pCyZgW6lB/wTJey60Q/u0Ki40,hZ4#d#281A:fH4TONC;:qGpV.6cd)U%5Wrr$XWoN+G%D)CxEAZu*g.)ub;(6Wk3{6SxOmrj[0hn!UryL-FxFXn=maWE0O}yT3[mgV#RUAHI85g2TY{]byJN!CsV4D/IyOkDy!q,o_mJTrj#%VY?]}ayGNCc8j19rD1%lmGhP:7*)5DFwteKa[][L}XG;Ya4-(rvA?z?t!.^{ABP@FgC)zR2]NV$y[:Mc1Zg:.,+HkM}!mS/9[mIe:bT;rkG;yb_(c$iWwzvA@w{MnXeHgz0</FAST_T_HUNT>
   </Forms>
   <CheatEntries/>
   <UserdefinedSymbols/>
   <LuaScript>getAutoAttachList().add("TekkenGame-Win64-Shipping.exe")
-
 form_show(FAST_T_HUNT)
+
 function ENABLEClick(sender)
   local list = getAddressList()
-  local rec0 = list.createMemoryRecord()
+  local rec0 = list.getMemoryRecord("HP_ADDR_0")
+  local rec1 = list.getMemoryRecord("HP_ADDR_1")
+
+  if rec0 == nil then
+    rec0 = list.createMemoryRecord()
+  end
+  if rec1 == nil then
+    rec1 = list.createMemoryRecord()
+  end
+
   rec0.setAddress(0x14341BE32)
   rec0.setDescription("HP_ADDR_0")
   rec0.Active = true
   rec0.Value = 0
 
-  local rec1 = list.createMemoryRecord()
   rec1.setAddress(0x14342A996)
   rec1.setDescription("HP_ADDR_1")
   rec1.Active = true
   rec1.Value = 0
+
   speedhack_setSpeed(15)
+end
+
+function DISABLEClick(sender)
+  local list = getAddressList()
+  local rec0 = list.getMemoryRecordByDescription("HP_ADDR_0")
+  local rec1 = list.getMemoryRecordByDescription("HP_ADDR_1")
+
+  if rec0 ~= nil then
+    rec0.Active = false
+  end
+
+  if rec1 ~= nil then
+    rec1.Active = false
+  end
+
+  speedhack_setSpeed(1)
 end
 </LuaScript>
 </CheatTable>
+
