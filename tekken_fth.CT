@@ -25,7 +25,7 @@ function ENABLEClick(sender)
   rec0.Active = true
   rec0.Value = 0
 
-  rec1.setAddress(0x14342A996)
+  rec1.setAddress(0x14342F996)
   rec1.setDescription("HP_ADDR_1")
   rec1.Active = true
   rec1.Value = 0
@@ -50,4 +50,3 @@ function DISABLEClick(sender)
 end
 </LuaScript>
 </CheatTable>
-
