@@ -20,12 +20,12 @@ function ENABLEClick(sender)
     rec1 = list.createMemoryRecord()
   end
 
-  rec0.setAddress(0x1434E4B36)
+  rec0.setAddress(0x1434E9D16)
   rec0.setDescription("HP_ADDR_0")
   rec0.Active = true
   rec0.Value = 0
 
-  rec1.setAddress(0x1434E4B36)
+  rec1.setAddress(0x1434E9D16)
   rec1.setDescription("HP_ADDR_1")
   rec1.Active = true
   rec1.Value = 0
